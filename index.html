@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>يوم رياضي إيماني - الله مطلع علي</title>
+
+    <!-- تحميل خط تجوال (Tajawal) والقاهرة (Cairo) من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- تحميل أيقونات Lucide العصرية -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- إعدادات Tailwind المخصصة للألوان والخطوط -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Tajawal", "sans-serif"],
+              heading: ["Cairo", "sans-serif"],
+            },
+            colors: {
+              emerald: {
+                850: "#064e3b",
+                950: "#022c22",
+              },
+              amber: {
+                450: "#f59e0b",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* تنسيقات إضافية للجماليات والحركة */
+      body {
+        font-family: "Tajawal", sans-serif;
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-heading {
+        font-family: "Cairo", sans-serif;
+      }
+      .hero-pattern {
+        background-color: #022c22;
+        background-image:
+          radial-gradient(#059669 0.75px, transparent 0.75px),
+          radial-gradient(#059669 0.75px, #022c22 0.75px);
+        background-size: 30px 30px;
+        background-position:
+          0 0,
+          15px 15px;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      @keyframes pulse-slow {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      .animate-pulse-slow {
+        animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+    </style>
+  </head>
+  <body
+    class="antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden"
+  >
+    <!-- الشريط العلوي (Navbar) -->
+    <header
+      class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-800 flex items-center justify-center text-white shadow-md"
+          >
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span
+              class="font-heading font-extrabold text-lg text-emerald-950 block leading-none"
+              >يوم رياضي إيماني</span
+            >
+            <span class="text-xs font-bold text-amber-600"
+              >شعار: "الله مطلع علي"</span
+            >
+          </div>
+        </div>
+
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-700"
+        >
+          <a href="#details" class="hover:text-emerald-600 transition"
+            >التفاصيل</a
+          >
+          <a href="#schedule" class="hover:text-emerald-600 transition"
+            >برنامج اليوم</a
+          >
+          <a href="#register" class="hover:text-emerald-600 transition"
+            >التسجيل</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a
+            href="#register"
+            class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-600/25 transition transform hover:-translate-y-0.5 flex items-center gap-2"
+          >
+            <span>احجز مقعدك</span>
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- القسم الرئيسي (Hero Section) -->
+    <section
+      class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 hero-pattern text-white overflow-hidden"
+    >
+      <!-- تأثيرات إضاءة خلفية -->
+      <div
+        class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-emerald-500/20 blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <!-- النص التعريفي -->
+          <div class="lg:col-span-7 text-center lg:text-right space-y-6">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/80 border border-emerald-500/40 text-amber-300 text-sm font-bold shadow-inner"
+            >
+              <span
+                class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"
+              ></span>
+              <span>للشباب من الصف الثامن (8) إلى الثاني عشر (12)</span>
+            </div>
+
+            <h1
+              class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight"
+            >
+              يوم رياضي إيماني
+              <span
+                class="block mt-2 text-transparent bg-clip-text bg-gradient-to-l from-amber-300 via-amber-400 to-yellow-200"
+              >
+                "الله مطلع علي"
+              </span>
+            </h1>
+
+            <p
+              class="text-lg sm:text-xl text-emerald-100/90 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            >
+              انطلق معنا في رحلة تجمع بين متعة الرياضة، روح الأخوة، وتزكية النفس
+              في أحضان الطبيعة بحديقة أومرلي. يوم متكامل من صلاة الفجر وحتى ما
+              بعد الظهر!
+            </p>
+
+            <!-- شريط المقاعد المحدودة -->
+            <div
+              class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 max-w-xl mx-auto lg:mx-0 flex flex-col sm:flex-row items-center justify-between gap-4"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shrink-0"
+                >
+                  <i data-lucide="users" class="w-6 h-6"></i>
+                </div>
+                <div class="text-right">
+                  <p class="text-xs text-emerald-200 font-medium">
+                    سارع بالتسجيل قبل اكتمال العدد
+                  </p>
+                  <p class="text-base font-extrabold text-white">
+                    <span class="text-amber-300 underline decoration-wavy"
+                      >الأماكن محدودة!</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <a
+                href="#register"
+                class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-emerald-950 font-extrabold px-6 py-3 rounded-xl shadow-lg transition transform hover:scale-105"
+              >
+                سجل الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- بطاقة بصرية عصرية -->
+          <div class="lg:col-span-5 relative">
+            <div
+              class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-700/50 group"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80"
+                alt="نشاط رياضي وكرة قدم في الطبيعة"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/800x600/064e3b/ffffff?text=يوم+رياضي+إيماني';
+                "
+                class="w-full h-[380px] sm:h-[430px] object-cover transform group-hover:scale-105 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent"
+              ></div>
+
+              <!-- بطاقة عائمة فوق الصورة -->
+              <div
+                class="absolute bottom-5 inset-x-5 bg-white/95 backdrop-blur-md rounded-2xl p-4 text-slate-900 shadow-xl"
+              >
+                <div
+                  class="flex items-center justify-between border-b border-slate-200 pb-3 mb-3"
+                >
+                  <div
+                    class="flex items-center gap-2 text-emerald-800 font-bold text-sm"
+                  >
+                    <i
+                      data-lucide="map-pin"
+                      class="w-5 h-5 text-emerald-600"
+                    ></i>
+                    <span>حديقة أومرلي (Ömerli)</span>
+                  </div>
+                  <span
+                    class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full"
+                  >
+                    50 ليرة تركية
+                  </span>
+                </div>
+                <div
+                  class="flex items-center justify-between text-xs sm:text-sm text-slate-600 font-semibold"
+                >
+                  <span class="flex items-center gap-1.5">
+                    <i
+                      data-lucide="calendar"
+                      class="w-4 h-4 text-amber-600"
+                    ></i>
+                    السبت 21 نوفمبر 2026
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="sunrise" class="w-4 h-4 text-amber-600"></i>
+                    من الفجر للعصر
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم البطاقات التعريفية (التفاصيل الأساسية) -->
+    <section id="details" class="py-16 -mt-10 relative z-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- البطاقة 1: التاريخ -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/60 border border-slate-100 hover:border-emerald-300 transition group"
+          >
+            <div
+              class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition"
+            >
+              <i data-lucide="calendar-days" class="w-6 h-6"></i>
+            </div>
+            <h3
+              class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+            >
+              التاريخ
+            </h3>
+            <p class="text-xl font-extrabold text-slate-900 mt-1">
+              السبت 21 نوفمبر 2026
+            </p>
+            <p class="text-xs text-slate-500 mt-2">
+              يوم عطلة مليء بالحيوية والفائدة
+            </p>
+          </div>
+
+          <!-- البطاقة 2: الوقت -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/60 border border-slate-100 hover:border-emerald-300 transition group"
+          >
+            <div
+              class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-500 group-hover:text-white transition"
+            >
+              <i data-lucide="clock" class="w-6 h-6"></i>
+            </div>
+            <h3
+              class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+            >
+              الوقت
+            </h3>
+            <p class="text-lg font-extrabold text-slate-900 mt-1">
+              من صلاة الفجر
+            </p>
+            <p class="text-xs text-slate-600 font-semibold mt-1">
+              إلى ما بعد صلاة الظهر (أو العصر)
+            </p>
+          </div>
+
+          <!-- البطاقة 3: المكان -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/60 border border-slate-100 hover:border-emerald-300 transition group"
+          >
+            <div
+              class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition"
+            >
+              <i data-lucide="trees" class="w-6 h-6"></i>
+            </div>
+            <h3
+              class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+            >
+              المكان
+            </h3>
+            <p class="text-xl font-extrabold text-slate-900 mt-1">
+              حديقة أومرلي
+            </p>
+            <p class="text-xs text-slate-500 mt-2">مساحات خضراء وملاعب مجهزة</p>
+          </div>
+
+          <!-- البطاقة 4: الرسوم والمقاعد -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/60 border border-slate-100 hover:border-emerald-300 transition group"
+          >
+            <div
+              class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4 group-hover:bg-rose-600 group-hover:text-white transition"
+            >
+              <i data-lucide="ticket" class="w-6 h-6"></i>
+            </div>
+            <h3
+              class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+            >
+              رسوم الاشتراك
+            </h3>
+            <p class="text-xl font-extrabold text-slate-900 mt-1">
+              50 ليرة تركية
+            </p>
+            <p class="text-xs text-rose-600 font-bold mt-2">الأماكن محدودة</p>
+          </div>
+        </div>
+
+        <!-- تنويه هام للدفع -->
+        <div
+          class="mt-8 bg-gradient-to-l from-amber-50 via-amber-100/70 to-amber-50 border-r-4 border-amber-500 rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-4"
+        >
+          <div
+            class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow"
+          >
+            <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-extrabold text-amber-950 text-base">
+              تنويه هام لتأكيد الحجز:
+            </h4>
+            <p class="text-amber-900 text-sm sm:text-base font-medium mt-0.5">
+              آخر موعد لدفع رسوم الاشتراك (50 ليرة تركية) هو
+              <strong
+                >يوم الجمعة 20 نوفمبر 2026 عند صلاة الجمعة في مسجد
+                المجمع</strong
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم برنامج اليوم (Timeline) -->
+    <section id="schedule" class="py-16 bg-white border-y border-slate-200/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span
+            class="text-emerald-600 font-extrabold text-sm tracking-wider uppercase bg-emerald-50 px-4 py-1.5 rounded-full"
+            >جدول الفعاليات</span
+          >
+          <h2
+            class="font-heading text-3xl sm:text-4xl font-black text-slate-900 mt-3"
+          >
+            برنامج اليوم المتكامل
+          </h2>
+          <p class="text-slate-600 mt-3 font-medium">
+            تم تصميم البرنامج بعناية لضمان أقصى درجات المتعة والفائدة —
+            <span class="text-emerald-700 font-bold"
+              >المشاركة في جميع الأنشطة متاحة للجميع</span
+            >.
+          </p>
+        </div>
+
+        <!-- شبكة الأنشطة الـ 11 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- 1 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-600 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="users-round" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-emerald-600"
+                >المحطة 01</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                التجمع قبل صلاة الفجر بـ 15 دقيقة
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                الاستقبال والتعارف في مسجد المجمع.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-700 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="moon-star" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-emerald-600"
+                >المحطة 02</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                صلاة الفجر في مسجد المجمع
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                بداية اليوم ببركة صلاة الفجر في جماعة.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-teal-600 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="bus" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-teal-600"
+                >المحطة 03</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                التحرك إلى الحديقة
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                قراءة أذكار الصباح جماعياً في الطريق إلى حديقة أومرلي.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-amber-500 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="trophy" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-amber-600"
+                >المحطة 04</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                دورة كرة قدم
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                منافسات حماسية وروح رياضية عالية بين الفرق.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-orange-500 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="coffee" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-orange-600"
+                >المحطة 05</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                وجبة الإفطار
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                إفطار جماعي شهي في الهواء الطلق لتجديد النشاط.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-indigo-600"
+                >المحطة 06</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                مسابقات متنوعة وجوائز تنافسية
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                ألعاب حركية وذهنية مشوقة مع جوائز للفائزين.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-600 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="message-circle-heart" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-emerald-600"
+                >المحطة 07</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                معايشة ونقاشات حول موضوع اليوم
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                جلسة حوارية تفاعلية حول استشعار مراقبة الله لنا.
+              </p>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-cyan-600 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-cyan-600"
+                >المحطة 08</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                محاضرة إيمانية
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                كلمة توجيهية ملهمة حول شعار "الله مطلع علي".
+              </p>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-800 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="sun" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-emerald-700"
+                >المحطة 09</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                صلاة الظهر
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                أداء صلاة الظهر جماعة في رحاب الطبيعة.
+              </p>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-red-600 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="flame" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-red-600">المحطة 10</span>
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                شواء وغداء
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                حفل شواء مميز ووجبة غداء جماعية.
+              </p>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div
+            class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/70 hover:bg-emerald-50/50 hover:border-emerald-200 transition md:col-span-2 lg:col-span-2"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-slate-800 text-white font-bold flex items-center justify-center shrink-0 shadow-sm"
+            >
+              <i data-lucide="home" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-slate-600"
+                >المحطة 11 (الختام)</span
+              >
+              <h3 class="font-bold text-slate-900 text-base mt-0.5">
+                الختام والعودة
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                توزيع الجوائز والتقاط الصور التذكارية ثم العودة بسلامة الله إلى
+                نقطة التجمع.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم التسجيل والربط مع Google Sheets -->
+    <section
+      id="register"
+      class="py-20 bg-gradient-to-b from-slate-50 to-emerald-50/40 relative"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-3xl shadow-2xl shadow-emerald-950/10 border border-slate-200/80 overflow-hidden"
+        >
+          <!-- رأس النموذج -->
+          <div
+            class="bg-gradient-to-l from-emerald-900 to-teal-800 p-8 sm:p-10 text-white relative overflow-hidden"
+          >
+            <div class="absolute left-0 top-0 opacity-10 pointer-events-none">
+              <i
+                data-lucide="clipboard-check"
+                class="w-48 h-48 -ml-8 -mt-8"
+              ></i>
+            </div>
+            <div class="relative z-10">
+              <span
+                class="inline-block bg-amber-400 text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-full mb-3"
+              >
+                استمارة التسجيل الرسمية
+              </span>
+              <h2 class="font-heading text-2xl sm:text-3xl font-black">
+                سجّل بياناتك الآن
+              </h2>
+              <p class="text-emerald-100 text-sm mt-1">
+                جميع الحقول مطلوبة لتأكيد طلب الاشتراك (الأماكن محدودة).
+              </p>
+            </div>
+          </div>
+
+          <!-- جسم النموذج -->
+          <form id="registrationForm" class="p-8 sm:p-10 space-y-6">
+            <!-- 1. الاسم (إجابة قصيرة - مطلوب) -->
+            <div>
+              <label
+                for="studentName"
+                class="block text-sm font-extrabold text-slate-800 mb-2"
+              >
+                الاسم الكامل للطالب <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400"
+                >
+                  <i data-lucide="user" class="w-5 h-5"></i>
+                </div>
+                <input
+                  type="text"
+                  id="studentName"
+                  name="name"
+                  required
+                  placeholder="أدخل اسمك الثلاثي..."
+                  class="w-full pr-12 pl-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
+                />
+              </div>
+            </div>
+
+            <!-- 2. الصف الدراسي (قائمة منسدلة - مطلوب) -->
+            <div>
+              <label
+                for="gradeLevel"
+                class="block text-sm font-extrabold text-slate-800 mb-2"
+              >
+                الصف الدراسي <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400"
+                >
+                  <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <select
+                  id="gradeLevel"
+                  name="grade"
+                  required
+                  class="w-full pr-12 pl-10 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition appearance-none"
+                >
+                  <option value="" disabled selected>
+                    -- اختر الصف الدراسي --
+                  </option>
+                  <option value="الصف الثامن 8">الصف الثامن 8</option>
+                  <option value="الصف التاسع 9">الصف التاسع 9</option>
+                  <option value="الصف العاشر 10">الصف العاشر 10</option>
+                  <option value="الصف الحادي عشر 11">الصف الحادي عشر 11</option>
+                  <option value="الصف الثاني عشر 12">الصف الثاني عشر 12</option>
+                </select>
+                <div
+                  class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500"
+                >
+                  <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. رقم تليفون ولي الأمر (إجابة قصيرة - مطلوب) -->
+            <div>
+              <label
+                for="parentPhone"
+                class="block text-sm font-extrabold text-slate-800 mb-2"
+              >
+                رقم تليفون ولي الأمر (واتساب / اتصال)
+                <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400"
+                >
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <input
+                  type="tel"
+                  id="parentPhone"
+                  name="parentPhone"
+                  required
+                  dir="ltr"
+                  placeholder="05XX XXX XX XX"
+                  class="w-full pr-12 pl-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 font-medium text-right focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
+                />
+              </div>
+            </div>
+
+            <!-- 4. هدفك من المشاركة في هذا اليوم (فقرة - مطلوب) -->
+            <div>
+              <label
+                for="goal"
+                class="block text-sm font-extrabold text-slate-800 mb-2"
+              >
+                هدفك من المشاركة في هذا اليوم
+                <span class="text-rose-600">*</span>
+              </label>
+              <div class="relative">
+                <textarea
+                  id="goal"
+                  name="goal"
+                  rows="4"
+                  required
+                  placeholder="اكتب بإيجاز ما الذي تطمح لتحقيقه أو الاستفادة منه في هذا اليوم الرياضي الإيماني..."
+                  class="w-full p-4 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition resize-y"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- مربع رسائل الحالة (بديل alert) -->
+            <div
+              id="formFeedback"
+              class="hidden rounded-2xl p-4 text-sm font-bold flex items-start gap-3"
+            ></div>
+
+            <!-- زر الإرسال -->
+            <div class="pt-2">
+              <button
+                type="submit"
+                id="submitBtn"
+                class="w-full bg-gradient-to-l from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-heading font-extrabold text-lg py-4 px-6 rounded-xl shadow-xl shadow-emerald-600/20 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <span id="submitBtnText">تأكيد وإرسال التسجيل</span>
+                <i data-lucide="send" id="submitBtnIcon" class="w-5 h-5"></i>
+              </button>
+              <p class="text-center text-xs text-slate-500 mt-3">
+                تذكير: يرجى تسليم رسوم الاشتراك (50 ليرة تركية) يوم الجمعة 20
+                نوفمبر 2026 عند صلاة الجمعة في مسجد المجمع.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- التذييل (Footer) -->
+    <footer
+      class="bg-emerald-950 text-emerald-200 py-10 border-t border-emerald-900"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right"
+      >
+        <div>
+          <p class="font-heading font-extrabold text-white text-lg">
+            يوم رياضي إيماني - "الله مطلع علي"
+          </p>
+          <p class="text-xs text-emerald-400 mt-1">
+            السبت 21 نوفمبر 2026 • حديقة أومرلي
+          </p>
+        </div>
+        <div class="text-xs text-emerald-400">
+          جميع الحقوق محفوظة © 2026 • اللجنة الشبابية والرياضية
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript للتفاعل والربط المباشر والحصري مع Google Sheets -->
+    <script>
+      // تفعيل أيقونات Lucide
+      lucide.createIcons();
+
+      /* ============================================================================
+           إعداد الربط مع Google Sheets (خاص بالمسؤول فقط داخل الكود)
+           ----------------------------------------------------------------------------
+           1. أنشئ ملف Google Sheet جديد.
+           2. افتح: Extensions (الإضافات) -> Apps Script
+           3. الصق الكود التالي في محرر Apps Script:
+
+              function doPost(e) {
+                var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+                if (sheet.getLastRow() === 0) {
+                  sheet.appendRow(["وقت التسجيل", "الاسم", "الصف الدراسي", "رقم ولي الأمر", "الهدف من المشاركة"]);
+                }
+                var data = JSON.parse(e.postData.contents);
+                sheet.appendRow([
+                  new Date().toLocaleString("ar-EG"),
+                  data.name,
+                  data.grade,
+                  data.parentPhone,
+                  data.goal
+                ]);
+                return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
+                  .setMimeType(ContentService.MimeType.JSON);
+              }
+
+           4. اضغط Deploy -> New deployment -> اختر Web app -> اجعل الوصول Anyone -> انسخ الرابط.
+           5. ضع الرابط المنسوخ بين علامتي التنصيص في السطر التالي:
+        ============================================================================ */
+      const GOOGLE_SHEET_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycby-8dAN4FCYbcpe6KJaAzUe9fNxpHKY6oNaZpilh4O9Pmw_3_NoSDNqKqsWOUs50kHLTw/exec";
+
+      // عرض رسائل التنبيه للمستخدم داخل الصفحة
+      function showFeedback(type, message) {
+        const box = document.getElementById("formFeedback");
+        box.classList.remove(
+          "hidden",
+          "bg-emerald-50",
+          "text-emerald-900",
+          "border-emerald-200",
+          "bg-rose-50",
+          "text-rose-900",
+          "border-rose-200",
+          "bg-amber-50",
+          "text-amber-900",
+          "border-amber-200",
+        );
+
+        if (type === "success") {
+          box.classList.add(
+            "bg-emerald-50",
+            "text-emerald-900",
+            "border",
+            "border-emerald-200",
+          );
+          box.innerHTML = `<i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i><div>${message}</div>`;
+        } else if (type === "warning") {
+          box.classList.add(
+            "bg-amber-50",
+            "text-amber-900",
+            "border",
+            "border-amber-200",
+          );
+          box.innerHTML = `<i data-lucide="info" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i><div>${message}</div>`;
+        } else {
+          box.classList.add(
+            "bg-rose-50",
+            "text-rose-900",
+            "border",
+            "border-rose-200",
+          );
+          box.innerHTML = `<i data-lucide="alert-circle" class="w-5 h-5 text-rose-600 shrink-0 mt-0.5"></i><div>${message}</div>`;
+        }
+        lucide.createIcons();
+      }
+
+      // معالجة إرسال النموذج إلى Google Sheets
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const submitBtn = document.getElementById("submitBtn");
+          const submitBtnText = document.getElementById("submitBtnText");
+
+          const payload = {
+            name: document.getElementById("studentName").value.trim(),
+            grade: document.getElementById("gradeLevel").value,
+            parentPhone: document.getElementById("parentPhone").value.trim(),
+            goal: document.getElementById("goal").value.trim(),
+          };
+
+          const scriptUrl = GOOGLE_SHEET_SCRIPT_URL.trim();
+
+          // التحقق من وجود رابط السكربت في الكود
+          if (
+            !scriptUrl ||
+            !scriptUrl.startsWith("https://script.google.com/")
+          ) {
+            showFeedback(
+              "warning",
+              "عذراً، نظام استقبال التسجيل قيد التفعيل حالياً من قبل الإدارة. يرجى المحاولة لاحقاً أو التواصل مع مشرف النشاط.",
+            );
+            return;
+          }
+
+          // حالة التحميل
+          submitBtn.disabled = true;
+          submitBtnText.textContent = "جاري إرسال بياناتك...";
+
+          try {
+            // إرسال البيانات باستخدام fetch بصيغة no-cors المتوافقة مع Google Apps Script
+            await fetch(scriptUrl, {
+              method: "POST",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(payload),
+            });
+
+            // إظهار رسالة النجاح وتفريغ الحقول
+            showFeedback(
+              "success",
+              `بارك الله فيك يا <strong>${payload.name}</strong>! تم تسجيل طلبك بنجاح.<br><span class="text-xs font-normal mt-1 block">نذكرك بتسليم رسوم الاشتراك (50 ليرة تركية) يوم الجمعة 20 نوفمبر 2026 عند صلاة الجمعة في مسجد المجمع لتأكيد مقعدك.</span>`,
+            );
+            this.reset();
+          } catch (error) {
+            console.error("Error:", error);
+            showFeedback(
+              "error",
+              "حدث خطأ أثناء الاتصال بالخادم. يرجى التأكد من اتصال الإنترنت والمحاولة مرة أخرى.",
+            );
+          } finally {
+            submitBtn.disabled = false;
+            submitBtnText.textContent = "تأكيد وإرسال التسجيل";
+          }
+        });
+    </script>
+  </body>
+</html>
